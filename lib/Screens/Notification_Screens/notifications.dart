@@ -75,26 +75,31 @@ class Notifications extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // height: 50.0,
-                child: Center(
-                  child: ListTile(
-                    subtitle: Text('To view notifcation'),
-                    leading: Icon(
-                      Icons.folder_open_outlined,
-                      // size: 30.0,
-                    ),
-                    title: Text(
-                      'Details',
-                      style: TextStyle(
-                          fontSize: 30.0, fontWeight: FontWeight.bold),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/viewnotification');
+                },
+                child: Container(
+                  // height: 50.0,
+                  child: Center(
+                    child: ListTile(
+                      subtitle: Text('To view notifcation'),
+                      leading: Icon(
+                        Icons.folder_open_outlined,
+                        // size: 30.0,
+                      ),
+                      title: Text(
+                        'View',
+                        style: TextStyle(
+                            fontSize: 30.0, fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF1D1E33),
-                  // color: Colors.deepPurple.shade700,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFF1D1E33),
+                    // color: Colors.deepPurple.shade700,
+                  ),
                 ),
               ),
             ),

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'home.dart';
-import 'login_service.dart';
+import '../Home_screen/home.dart';
+import '../../Services/Login_Services/login_service.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 

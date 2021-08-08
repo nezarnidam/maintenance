@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'account.dart';
-import 'notifications.dart';
-import 'workorder.dart';
+import '../Account_Screen/account.dart';
+import '../Notification_Screens/notifications.dart';
+import '../Workorder_Screens/workorder.dart';
 
 class Home extends StatefulWidget {
   @override

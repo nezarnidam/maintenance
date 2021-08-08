@@ -2,9 +2,12 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:maintenance/create_notification.dart';
-import 'package:maintenance/update_notification.dart';
-import 'login_screen.dart';
+import 'package:maintenance/Screens/Notification_Screens/create_notification.dart';
+import 'package:maintenance/Screens/Notification_Screens/update_notification.dart';
+import 'package:maintenance/Screens/Notification_Screens/view_notification.dart';
+import 'package:maintenance/Screens/Workorder_Screens/create_workorder.dart';
+import 'Screens/Notification_Screens/detail_notification.dart';
+import 'Screens/Login_Screen/login_screen.dart';
 
 void main() {
   runApp(
@@ -12,6 +15,8 @@ void main() {
       routes: {
         '/createnotification': (context) => CreateNotification(),
         '/updatenotification': (context) => UpdateNotification(),
+        '/viewnotification': (context) => ViewNotification(),
+        '/createworkorder': (context) => CreateWorkorder()
       },
       // home: LoginScreen(),
       home: LoginScreen(),
