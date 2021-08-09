@@ -5,7 +5,8 @@ import 'constants.dart';
 class GetContainer {
   late final String str;
   late final Function() f;
-  static Container getContainer({str: String, f: Function}) {
+  static Container getContainer(
+      {@required str: String, @required f: Function, var init, bool? enabled}) {
     return Container(
       padding: ktextfieldPadding,
       child: TextFormField(
@@ -14,6 +15,8 @@ class GetContainer {
         // autovalidate: true,
         onChanged: (value) => f(value),
         decoration: ktextfieldDecoration(str),
+        initialValue: init,
+        enabled: enabled,
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'Please provide $str';

@@ -2,6 +2,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 late String workOrder_no;
+late String error;
 
 class WorkorderCreateService {
   Future<int> getData(Map<String, String> mp) async {
@@ -30,11 +31,17 @@ class WorkorderCreateService {
     if (res.statusCode == 200) {
       print(decodedData);
       workOrder_no = decodedData["workOrder_no"];
+    } else {
+      error = decodedData["err"];
     }
     return res.statusCode;
   }
 
   String getWorkorderno() {
     return workOrder_no;
+  }
+
+  String getErrorMessage() {
+    return error;
   }
 }

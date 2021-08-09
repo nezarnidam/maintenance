@@ -6,6 +6,8 @@ import 'package:maintenance/Screens/Notification_Screens/create_notification.dar
 import 'package:maintenance/Screens/Notification_Screens/update_notification.dart';
 import 'package:maintenance/Screens/Notification_Screens/view_notification.dart';
 import 'package:maintenance/Screens/Workorder_Screens/create_workorder.dart';
+import 'package:maintenance/Screens/Workorder_Screens/update_workorder.dart';
+import 'package:maintenance/Screens/Workorder_Screens/view_workorder.dart';
 import 'Screens/Notification_Screens/detail_notification.dart';
 import 'Screens/Login_Screen/login_screen.dart';
 
@@ -16,7 +18,9 @@ void main() {
         '/createnotification': (context) => CreateNotification(),
         '/updatenotification': (context) => UpdateNotification(),
         '/viewnotification': (context) => ViewNotification(),
-        '/createworkorder': (context) => CreateWorkorder()
+        '/createworkorder': (context) => CreateWorkorder(),
+        '/updateworkorder': (context) => UpdateWorkorder(),
+        '/updateworkorder': (context) => ViewWorkorder()
       },
       // home: LoginScreen(),
       home: LoginScreen(),

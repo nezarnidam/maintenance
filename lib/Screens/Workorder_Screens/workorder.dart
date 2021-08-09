@@ -42,22 +42,27 @@ class WorkOrder extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // height: 50.0,
-                child: Center(
-                  child: ListTile(
-                    leading: Icon(Icons.update),
-                    title: Text(
-                      'Update',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/updateworkorder');
+                },
+                child: Container(
+                  // height: 50.0,
+                  child: Center(
+                    child: ListTile(
+                      leading: Icon(Icons.update),
+                      title: Text(
+                        'Update',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30.0),
+                      ),
+                      subtitle: Text('To update work order'),
                     ),
-                    subtitle: Text('To update work order'),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF1D1E33),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFF1D1E33),
+                  ),
                 ),
               ),
             ),
@@ -65,22 +70,27 @@ class WorkOrder extends StatelessWidget {
           Expanded(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
-                // height: 50.0,
-                child: Center(
-                  child: ListTile(
-                    leading: Icon(Icons.folder_open_outlined),
-                    title: Text(
-                      'View',
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold, fontSize: 30.0),
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/updateworkorder');
+                },
+                child: Container(
+                  // height: 50.0,
+                  child: Center(
+                    child: ListTile(
+                      leading: Icon(Icons.folder_open_outlined),
+                      title: Text(
+                        'View',
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold, fontSize: 30.0),
+                      ),
+                      subtitle: Text('To view work order'),
                     ),
-                    subtitle: Text('To view work order'),
                   ),
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF1D1E33),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    color: Color(0xFF1D1E33),
+                  ),
                 ),
               ),
             ),

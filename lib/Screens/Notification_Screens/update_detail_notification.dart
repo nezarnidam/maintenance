@@ -16,6 +16,7 @@ class UpdateDetailNotification extends StatefulWidget {
 
 class _UpdateDetailNotificationState extends State<UpdateDetailNotification> {
   static bool loader = true;
+
   String notif = '';
   Map<String, String> data = {};
   String descr = '';
@@ -194,6 +195,7 @@ class _UpdateDetailNotificationState extends State<UpdateDetailNotification> {
                                 onChanged: (value) {
                                   notif = value;
                                 },
+                                enabled: false,
                                 decoration:
                                     textfieldDecoration('Notification No'),
                                 initialValue: notif,

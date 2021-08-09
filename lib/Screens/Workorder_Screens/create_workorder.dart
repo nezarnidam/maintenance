@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:maintenance/Components/get_container.dart';
+import 'package:maintenance/Components/loading_page.dart';
 import 'package:maintenance/Services/Workorder_Services/workorder_create_service.dart';
 
 class CreateWorkorder extends StatefulWidget {
@@ -54,14 +55,14 @@ class _CreateWorkorderState extends State<CreateWorkorder> {
           // print(value);
         },
       ),
-      GetContainer.getContainer(
-        str: 'Material Number',
-        f: (value) {
-          matNO = value;
-          print(matNO);
-          // print(value);
-        },
-      ),
+      // GetContainer.getContainer(
+      //   str: 'Material Number',
+      //   f: (value) {
+      //     matNO = value;
+      //     print(matNO);
+      //     // print(value);
+      //   },
+      // ),
       GetContainer.getContainer(
         str: 'Normal Duration',
         f: (value) {
@@ -110,14 +111,14 @@ class _CreateWorkorderState extends State<CreateWorkorder> {
           // print(value);
         },
       ),
-      GetContainer.getContainer(
-        str: 'Requirement quantity',
-        f: (value) {
-          reqQuantity = value;
-          print(reqQuantity);
-          // print(value);
-        },
-      ),
+      // GetContainer.getContainer(
+      //   str: 'Requirement quantity',
+      //   f: (value) {
+      //     reqQuantity = value;
+      //     print(reqQuantity);
+      //     // print(value);
+      //   },
+      // ),
       GetContainer.getContainer(
         str: 'Work Activity',
         f: (value) {
@@ -165,7 +166,8 @@ class _CreateWorkorderState extends State<CreateWorkorder> {
                 Navigator.pop(context);
               } else {
                 Fluttertoast.showToast(
-                    msg: "Failed to create notification, Try again",
+                    msg: "Failed to create notification," +
+                        create.getErrorMessage(),
                     toastLength: Toast.LENGTH_LONG,
                     gravity: ToastGravity.CENTER,
                     timeInSecForIosWeb: 1,
@@ -206,17 +208,19 @@ class _CreateWorkorderState extends State<CreateWorkorder> {
       appBar: AppBar(
         title: Text('Create workorder'),
       ),
-      body: Form(
-        key: _formKey,
-        child: ListView.builder(
-            itemCount: 1,
-            itemBuilder: (BuildContext context, int index) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: getList(),
-              );
-            }),
-      ),
+      body: loader
+          ? LoadingPage()
+          : Form(
+              key: _formKey,
+              child: ListView.builder(
+                  itemCount: 1,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: getList(),
+                    );
+                  }),
+            ),
     );
   }
 
