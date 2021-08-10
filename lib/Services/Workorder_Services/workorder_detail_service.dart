@@ -37,7 +37,8 @@ class WorkorderDetailService {
         "short_text": decodedData["short_text"],
         "system_status": decodedData["system_status"],
         "entered_by": decodedData["entered_by"],
-        "duration": decodedData["duration"]
+        "duration": decodedData["duration"],
+        "description": decodedData["woOperation_data"]
       };
     }
     print("Inside WO Detail Service");

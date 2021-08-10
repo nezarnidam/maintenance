@@ -70,14 +70,23 @@ class _UpdateDetailWorkorderState extends State<UpdateDetailWorkorder> {
           },
           init: data["workorder"].toString(),
           enabled: false),
-      // GetContainer.getContainer(
-      //     str: 'Description',
-      //     f: (value) {
-      //       desc = value;
-      //       // print(desc);
-      //       // print(value);
-      //     },
-      //     init: data["short_text"].toString()),
+      GetContainer.getContainer(
+        str: 'Description',
+        f: (value) {
+          oprDesc = value;
+          // print(oprDesc);
+          // print(value);
+        },
+        init: desc = data["description"].toString(),
+      ),
+      GetContainer.getContainer(
+          str: ' Opr Description',
+          f: (value) {
+            desc = value;
+            // print(desc);
+            // print(value);
+          },
+          init: data["short_text"].toString()),
       GetContainer.getContainer(
           str: 'Equipment id',
           f: (value) {
@@ -120,14 +129,7 @@ class _UpdateDetailWorkorderState extends State<UpdateDetailWorkorder> {
             // print(value);
           },
           init: data["priority_type"].toString()),
-      GetContainer.getContainer(
-          str: 'Opr Description',
-          f: (value) {
-            desc = value;
-            // print(oprDesc);
-            // print(value);
-          },
-          init: desc = data["short_text"].toString()),
+
       GetContainer.getContainer(
           str: 'Order Type',
           f: (value) {

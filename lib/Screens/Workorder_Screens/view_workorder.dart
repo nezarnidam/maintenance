@@ -21,7 +21,7 @@ class _ViewWorkorderState extends State<ViewWorkorder> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Update workorder'),
+        title: Text('View workorder'),
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,

@@ -8,7 +8,7 @@ import 'package:maintenance/Services/Workorder_Services/workorder_getlist_servic
 import 'detail_workorder.dart';
 
 class CreatedWorkorder extends StatefulWidget {
-  final view;
+  final String view;
   CreatedWorkorder(this.view);
   @override
   _CreatedWorkorderState createState() => _CreatedWorkorderState();
@@ -120,7 +120,7 @@ class _CreatedWorkorderState extends State<CreatedWorkorder> {
                             // ),
                           ),
                           title: Text(getWorkorderno(index)),
-                          // subtitle: Text(getDescr(index)),
+                          subtitle: Text(getDescr(index)),
                           // trailing: Icon(
                           //   Icons.arrow_right_alt,
                           //   // color: Color(0xFF0A0E21),

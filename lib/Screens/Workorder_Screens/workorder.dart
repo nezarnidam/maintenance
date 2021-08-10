@@ -72,7 +72,7 @@ class WorkOrder extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/updateworkorder');
+                  Navigator.pushNamed(context, '/viewworkorder');
                 },
                 child: Container(
                   // height: 50.0,

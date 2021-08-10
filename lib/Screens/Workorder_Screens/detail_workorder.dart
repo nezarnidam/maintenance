@@ -47,7 +47,7 @@ class _DetailWorkorderState extends State<DetailWorkorder> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     info('Workorder No:', '$wo'),
-                    info('Description:', data["short_text"].toString()),
+                    info('Description:', data["description"].toString()),
                     info('Priority:', data["priority"].toString()),
                     info('Equipment No:', data["equipment"].toString()),
                     info('Planning Plant:', data["planning_plant"].toString()),

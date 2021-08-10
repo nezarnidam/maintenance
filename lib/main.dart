@@ -20,7 +20,7 @@ void main() {
         '/viewnotification': (context) => ViewNotification(),
         '/createworkorder': (context) => CreateWorkorder(),
         '/updateworkorder': (context) => UpdateWorkorder(),
-        '/updateworkorder': (context) => ViewWorkorder()
+        '/viewworkorder': (context) => ViewWorkorder()
       },
       // home: LoginScreen(),
       home: LoginScreen(),
